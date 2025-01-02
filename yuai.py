@@ -3,7 +3,7 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import os
 
 # Muat model dan tokenizer
-model_path = "C:\\Users\\Getzbie Alfredo Tpoy\\Documents\\7_SMT_UNUD\\Projek Summarization\\model_summarization"  # Ganti dengan path model Anda
+model_path = "./model_summarization"  # Ganti dengan path model Anda
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
 
