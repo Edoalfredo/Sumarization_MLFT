@@ -36,7 +36,7 @@ def summarize_text(text):
 st.title("Text Summarization")
 
 # Input
-input_text = st.text_area("Masukkan teks yang akan diringkas:")
+input_text = st.text_area("Masukkan teks yang akan diringkas:", height=300)
 
 # Jika ada input teks (baik dari teks area atau file), tampilkan tombol untuk summarization
 if st.button("Ringkas Teks"):
