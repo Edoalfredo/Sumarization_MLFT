@@ -41,10 +41,6 @@ input_option = st.radio("Pilih tipe input:", ("Teks", "File"))
 input_text = ""
 if input_option == "Teks":
     input_text = st.text_area("Masukkan teks yang akan diringkas:")
-else:
-    uploaded_file = st.file_uploader("Upload file teks:", type=["txt"])
-    if uploaded_file is not None:
-        input_text = read_file(uploaded_file)
 
 # Jika ada input teks (baik dari teks area atau file), tampilkan tombol untuk summarization
 if input_text:
@@ -57,17 +53,5 @@ if input_text:
         if output_option == "Tampilkan Teks":
             st.subheader("Hasil Ringkasan:")
             st.write(summary)
-        else:
-            # Simpan ke file dan berikan tautan unduh
-            filename = save_summary_to_file(summary)
-            with open(filename, "rb") as f:
-                st.download_button(
-                    label="Unduh Ringkasan",
-                    data=f,
-                    file_name="summary.txt",
-                    mime="text/plain"
-                )
 
-# Berikan peringatan jika tidak ada input
-else:
-    st.warning("Silakan masukkan teks atau unggah file untuk diringkas.")
+# Berikan peringatan jika tidak ada input\
