@@ -8,16 +8,10 @@ tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
 
 # CSS untuk mengubah tampilan Streamlit
-page_bg_color = """
-<style>
-.stApp {
-    background-color: #FBFBFB; /* Ganti dengan kode warna yang Anda inginkan */
-}
-</style>
-"""
+
 
 # Terapkan CSS ke Streamlit
-st.markdown(page_bg_color, unsafe_allow_html=True)
+
 
 # Fungsi untuk melakukan summarization
 def summarize_text(text):
